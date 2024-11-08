@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".AddStudent">
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Add Student"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editId"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:hint="Enter StudentId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editRoll"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:hint="Enter RollNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editMarks"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Marks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editMobile"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editCourse"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:onClick="save"
+        android:backgroundTint="#008EFF"
+        android:layout_weight="0.5"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:text="Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:onClick="cancle"
+        android:backgroundTint="#F60000"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:text="Cancle"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
