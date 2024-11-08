@@ -1,6 +1,10 @@
 package com.sunbeam;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +14,27 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class EmpDetails extends AppCompatActivity {
 
+    TextView empId,empName,empSalary;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_emp_details);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        empId=findViewById(R.id.empId);
+        empName=findViewById(R.id.empName);
+        empSalary=findViewById(R.id.empSalary);
+
+        Intent intent = getIntent();
+        Employee emp = (Employee) intent.getSerializableExtra("Employee");
+        Log.e( "onCreate: ", emp.getName());
+        Log.e( "onCreate: ", String.valueOf(emp.getEmpid()));
+        Log.e( "onCreate: ", String.valueOf(emp.getSalary()));
+        Toast.makeText(this, emp.toString(), Toast.LENGTH_SHORT).show();
+        empId.setText(""+emp.getEmpid());
+        empName.setText(emp.getName());
+        empSalary.setText(""+emp.getSalary());
+
+
     }
 }

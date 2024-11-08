@@ -1,10 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     tools:context=".activity.EmpAddActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="Add Employee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editId"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:hint="Enter EmpId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:hint="Enter Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editSalary"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:hint="Enter Salary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:backgroundTint="#29EF2D"
+            android:onClick="save"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:backgroundTint="#F44336"
+            android:onClick="cancle"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Cancle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
